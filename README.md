@@ -10,7 +10,7 @@ git clone https://github.com/ermogenes/simple-mongo-docker-compose.git
 ```
 
 Efetue as configurações:
-- `.env` - credenciais que serão criados na inicialização do Mongo
+- `.env` - credenciais que serão criadas na inicialização do Mongo
     - `DB_NAME` - nome do banco
     - `DB_USER` - usuário
     - `DB_PASSWORD` - senha
