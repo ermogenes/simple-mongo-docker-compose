@@ -9,7 +9,6 @@ mongo -- "$MONGO_INITDB_DATABASE" <<EOF
       pwd: '$DB_PASSWORD',
       roles: [{ role: 'readWrite', db: '$DB_NAME' }]
     });
-    db.colecaoInicial01.createIndex({ "address.zip": 1 }, { unique: false });
-    db.colecaoInicial01.insert({ "address": { "city": "Paris", "zip": "123" }, "name": "Mike", "phone": "1234" });
-    db.colecaoInicial01.insert({ "address": { "city": "Marsel", "zip": "321" }, "name": "Helga", "phone": "4321" });
+    db.citizen.createIndex({ "name": 1 }, { unique: false });
+    db.citizen.createIndex({ "socialName": 1 }, { unique: false });
 EOF

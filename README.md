@@ -25,7 +25,36 @@ Inicie os serviços:
 docker compose up -d
 ```
 
+Para parar os serviços mantendo o estado do banco:
+
+```bash
+docker compose down
+```
+
+Para parar e zerar o banco:
+
+```bash
+docker compose down && docker volume prune -f 
+```
+
 ## Acesso
 
 - MongoDB na porta `27017`
 - Mongo Express em `http://localhost:10190/`
+
+Exemplo de _string_ de conexão para um banco chamado `citizenDB`, com usuário `user_app` e senha `pwd_app`:
+- `mongodb://user_app:pwd_app@localhost:27017/citizenDB`
+
+## Massa de dados
+
+Baixe o gerador:
+
+```bash
+git clone https://github.com/ermogenes/citizen-datagen
+```
+
+Ajuste a _string_ de conexão en `gen.js` e execute passando como argumento o número de registros a serem criados (no exemplo, 1 milhão):
+
+```bash
+node gen.js 1000000
+```
