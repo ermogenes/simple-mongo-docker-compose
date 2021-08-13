@@ -50,10 +50,10 @@ Exemplo de _string_ de conexão para um banco chamado `citizenDB`, com usuário 
 Baixe o gerador:
 
 ```bash
-git clone https://github.com/ermogenes/citizen-datagen
+git clone https://github.com/ermogenes/citizen-datagen.git
 ```
 
-Ajuste a _string_ de conexão en `gen.js` e execute passando como argumento o número de registros a serem criados (no exemplo, 1 milhão):
+Ajuste a _string_ de conexão em `gen.js` e execute passando como argumento o número de registros a serem criados (no exemplo, 1 milhão):
 
 ```bash
 node gen.js 1000000
