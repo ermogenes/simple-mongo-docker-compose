@@ -9,6 +9,6 @@ mongo -- "$MONGO_INITDB_DATABASE" <<EOF
       pwd: '$DB_PASSWORD',
       roles: [{ role: 'readWrite', db: '$DB_NAME' }]
     });
-    db.citizen.createIndex({ "name": 1 }, { unique: false });
-    db.citizen.createIndex({ "socialName": 1 }, { unique: false });
+    db.citizens.createIndex({ "name": 1 }, { unique: false });
+    db.citizens.createIndex({ "socialName": 1 }, { unique: false });
 EOF
