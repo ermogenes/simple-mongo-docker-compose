@@ -34,7 +34,7 @@ docker compose down
 Para parar e zerar o banco:
 
 ```bash
-docker compose down && docker volume prune -f 
+docker compose down && docker volume rm simple-mongo-docker-compose_mongo-data -f 
 ```
 
 ## Acesso
@@ -53,8 +53,14 @@ Baixe o gerador:
 git clone https://github.com/ermogenes/citizen-datagen.git
 ```
 
-Ajuste a _string_ de conexão em `gen.js` e execute passando como argumento o número de registros a serem criados (no exemplo, 1 milhão):
+Instale as dependências:
 
 ```bash
-node gen.js 1000000
+npm install
+```
+
+Ajuste a _string_ de conexão em `gen.js` e execute passando como argumento o número de registros a serem criados (no exemplo, 100K):
+
+```bash
+node gen.js 100000
 ```
